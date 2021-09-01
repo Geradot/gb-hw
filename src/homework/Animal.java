@@ -8,19 +8,16 @@ public abstract class Animal {
         this.name = name;
     }
 
-    protected void run(int meters) {
-        System.out.println("Команда для " + name + ": пробеги " + meters + " метров!");
-        if (meters <= runLimit) {
-            System.out.println(name + " пробежал " + meters + " метров.");
-        } else {
-            System.out.println(name + " не может пробежать " + meters + " метров. " +
-                    "Его предел — " + runLimit + " метров.");
-        }
-        System.out.println();
+    protected String run(int meters) {
+        String s = "Команда для " + name + ": пробеги " + meters + " метров!\n";
+        
+        return s += (meters <= runLimit) ? name + " пробежал " + meters + " метров.\n" :
+                name + " не может пробежать " + meters + " метров. " +
+                "Его предел — " + runLimit + " метров.\n";
     }
 
-    protected void swim(int meters) {
-        System.out.println("Команда для " + name + ": проплыви " + meters + " метров!");
+    protected String swim(int meters) {
+        return "Команда для " + name + ": проплыви " + meters + " метров!\n";
     }
 
 }

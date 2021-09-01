@@ -1,14 +1,14 @@
 package homework;
 
 public class Cat extends Animal {
+    public static int catsCount = 0;
     Cat(String name) {
         super(name);
         this.runLimit = 200;
     }
 
     @Override
-    public void swim(int meters) {
-        System.out.println("Команда для " + name + ": проплыви " + meters + " метров.");
-        System.out.println("Коты не умеют плавать.");
+    public String swim(int meters) {
+        return super.swim(meters) + "Коты не умеют плавать.\n";
     }
 }

@@ -1,23 +1,24 @@
 package homework;
 
+import static homework.Cat.catsCount;
+import static homework.Dog.dogsCount;
+
 public class Main {
 
     public static void main(String[] args) {
-        int catsCount = 0;
-        int dogsCount = 0;
         Animal[] animals = {new Cat("Cat 1"), new Dog("Dog 1"), new Cat("Cat 2"), new Cat("Cat 3"), new Dog("Dog 2")};
         for (int i = 0; i < animals.length; i++) {
             if (animals[i] instanceof Cat) {
-                catsCount++;
                 // Каст не нужен, поскольку методы родительские
-                animals[i].run(150);
-                animals[i].swim(5);
+                catsCount++;
+                System.out.println(animals[i].run(150));
+                System.out.println(animals[i].swim(5));
             } else if (animals[i] instanceof Dog) {
                 dogsCount++;
-                animals[i].run(100);
-                animals[i].run(600);
-                animals[i].swim(5);
-                animals[i].swim(15);
+                System.out.println(animals[i].run(100));
+                System.out.println(animals[i].run(600));
+                System.out.println(animals[i].swim(5));
+                System.out.println(animals[i].swim(15));
             }
             System.out.println();
         }

@@ -1,7 +1,5 @@
 package ConsoleGame;
 
-import org.jetbrains.annotations.NotNull;
-
 import static ConsoleGame.ConsoleApp.random;
 import static ConsoleGame.ConsoleApp.randomValue;
 
@@ -38,7 +36,7 @@ public class GameMap {
         this.cells[player.getPositionY()][player.getPositionX()] = player.getPoint();
     }
 
-    public void spawnEnemies(Player player, @NotNull Mine mine) {
+    public void spawnEnemies(Player player, Mine mine) {
         int enemyPosX;
         int enemyPosY;
 
